@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <header>
+      <h1>To-Do List Program</h1>
+    </header>
+    <dialog id="add-item">
+      <form id="get-item" method="dialog">
+        <label for="title">Title:</label>
+        <input id="title" type="text" name="title" maxlength="15" required />
+
+        <label for="description">Description:</label>
+        <input
+          id="description"
+          type="text"
+          name="description"
+          maxlength="30"
+          required
+        />
+
+        <label for="due-date">Due Date:</label>
+        <input id="due-date" type="datetime-local" name="due-date" required />
+
+        <label for="project">Project:</label>
+        <input
+          id="project"
+          type="text"
+          name="project"
+          maxlength="20"
+          placeholder="Not required"
+        />
+
+        <fieldset>
+          <legend>Priority:</legend>
+
+          <input id="low" type="radio" name="priority" value="Low" checked />
+          <label for="low">Low</label>
+
+          <input id="high" type="radio" name="priority" value="High" />
+          <label for="high">High</label>
+        </fieldset>
+        <fieldset>
+          <legend>Is done?</legend>
+
+          <input id="yes" type="radio" name="is-done" value="Yes" />
+          <label for="yes">Yes</label>
+
+          <input id="no" type="radio" name="is-done" value="No" checked />
+          <label for="no">No</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button id="close-button" type="button">Close</button>
+      </form>
+    </dialog>
+    <div class="add-item"><button id="add-button">+</button></div>
+    <div class="content"></div>
+    <div id="change-project-div">
+      <dialog id="change-project-dialog">
+        <form id="change-project-form">
+          <input
+            type="text"
+            id="change-project-input"
+            placeholder="Change project"
+          />
+          <fieldset>
+            <legend>Priority:</legend>
+
+            <input
+              id="low-change"
+              type="radio"
+              name="priority-change"
+              value="Low"
+              checked
+            />
+            <label for="low-change">Low</label>
+
+            <input
+              id="high-change"
+              type="radio"
+              name="priority-change"
+              value="High"
+            />
+            <label for="high-change">High</label>
+          </fieldset>
+          <fieldset>
+            <legend>Is done?</legend>
+
+            <input
+              id="yes-change"
+              type="radio"
+              name="is-done-change"
+              value="Yes"
+            />
+            <label for="yes-change">Yes</label>
+
+            <input
+              id="no-change"
+              type="radio"
+              name="is-done-change"
+              value="No"
+              checked
+            />
+            <label for="no-change">No</label>
+          </fieldset>
+          <button type="submit">Change</button>
+          <button type="button" id="close-project-button">Close</button>
+        </form>
+      </dialog>
+    </div>
+    <dialog id="dialog-expand"></dialog>
+  </body>
+</html>
